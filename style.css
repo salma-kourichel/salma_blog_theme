@@ -1,0 +1,263 @@
+/*
+Theme Name: Salma Blog Theme
+Author: Salma Kourichel
+Description: A custom WordPress blog theme for portfolio
+Version: 1.0
+*/
+/* Salma Blog Theme - Clean & Modern Style */
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #a9c9d6;
+  color: #33333317;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #519dbb;
+  color: #fff;
+  padding: 40px 20px;
+  text-align: left;
+  background-image: url('des-pierres-lisses-sur-une-plage-au-coucher-du-soleil.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 300px;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.5em;
+}
+
+header p {
+  font-style: italic;
+  color: #cceeff;
+}
+
+nav {
+  margin-top: 20px;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+nav ul li {
+  display: inline;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 8px 12px;
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+
+nav ul li a:hover {
+  border: 2px solid #1d5f6bc9;
+  background-color: #3c95dd4b;
+  border-radius: 4px;
+}
+
+
+
+article {
+  background-color: #ffffff00;
+  color: #1e1e1e;
+  padding: 25px;
+  box-shadow: 0 2px 8px #314c5c;
+  height: fit-content;
+  
+}
+
+article h2 {
+  color: #1e1e1e;
+  margin-top: 0;
+  display: none;
+}
+
+article p {
+  margin-bottom: 1em;
+}
+
+.widget {
+  background: #fff;
+  padding: 20px;
+  margin: 20px;
+  border-left: 3px solid #ccc;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.24);
+  width: fit-content;
+}
+
+.widget-title {
+  color: #004466;
+  margin-top: 0;
+}
+
+aside {
+  max-width: 300px;
+  float: right;
+  background-color: rgba(155, 153, 153, 0);
+  color:#1e1e1e;
+}
+
+footer {
+  background-color: #519dbb;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  height: 30%;
+  clear: both;
+}
+body.dark-mode {
+  background-color: #1e1e1e;
+  color: #e0e0e0;
+}
+
+body.dark-mode header {
+  background-color: #111;
+  border-color: #444;
+  background-image: url('plan-horizontal-de-la-mer-calme-sous-le-ciel-nuageux-fou-dans-la-soiree.jpg');
+}
+
+body.dark-mode footer {
+  background-color: #111111;
+  border-color: #444;
+}
+
+body.dark-mode nav ul li a {
+  color: #e0e0e0;
+  border-color: transparent;
+}
+
+body.dark-mode nav ul li a:hover {
+  background-color: #222;
+  border-color: #666;
+}
+
+body.dark-mode article {
+  background-color: #2a2a2a;
+  color: #f0f0f0;
+  border-left-color: #006699;
+}
+
+body.dark-mode .widget {
+  background-color: #2c2c2c;
+  border-left-color: #444;
+}
+
+body.dark-mode .widget-title {
+  color: #a8d8ff;
+}
+/* 🔘 Toggle Switch Styles */
+.toggle-container {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 999;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 28px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  background-color: #4f7da33f;
+  border-radius: 34px;
+  border: #1e1e1e;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background-color: #519dbba4;
+  bottom: 4px;
+  left: 4px;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #051d29b6;
+}
+
+input:checked + .slider:before {
+  transform: translateX(22px);
+}
+/* Ensure the swiper container takes full width */
+.swiper {
+  width: 100%;
+  height: 100%; /* You can adjust this value */
+ 
+}
+
+
+.swiper-slide {
+  width: 100%; /* This will make each slide take up the entire width of the swiper */
+  height: 100%; /* Optional: make sure slides stretch to fill the swiper */
+}
+
+.swiper-slide img {
+  width: 100%; /* Ensure images take up the full width of the swiper slide */
+  height: 100%; /* Optional: make sure images stretch to fill the slide */
+  object-fit: cover; /* This will ensure the image covers the entire slide without distortion */
+  object-position: center; /* Center the image */
+}
+.swiper-pagination {
+  height: 100%;
+  width: 100%;
+}
+
+.flip-container {
+  perspective: 1500px;
+  overflow: hidden;
+}
+
+.flip-page {
+  transition: transform 1s ease;
+  transform-style: preserve-3d;
+}
+
+.flip-container.flipped .flip-page {
+  transform: rotateY(-180deg);
+}
+
+#flip-next {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 9999;
+  padding: 10px 20px;
+  background: #222;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
